@@ -1,0 +1,61 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-text text-white">
+  <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <!-- Brand -->
+      <div>
+        <a href="/" class="font-heading text-3xl font-bold tracking-tight text-secondary">
+          WeSeW
+        </a>
+        <p class="mt-3 text-sm text-white/70 leading-relaxed">
+          Ательє індивідуального пошиву у Харкові.<br />
+          25+ років досвіду та довіри клієнтів.
+        </p>
+      </div>
+
+      <!-- Contacts -->
+      <div>
+        <h3 class="font-heading text-xl font-semibold mb-4">Контакти</h3>
+        <ul class="space-y-3 text-sm text-white/70">
+          <li>
+            <a href="tel:+380963061920" class="hover:text-secondary transition-colors duration-200">
+              +380 96 306 19 20
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/+380963061920" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors duration-200">
+              Telegram
+            </a>
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/5mnVHBy7YPqm3HfB9" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition-colors duration-200">
+              вул. Валентинівська, 12, Харків
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Schedule -->
+      <div>
+        <h3 class="font-heading text-xl font-semibold mb-4">Графік роботи</h3>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li class="flex justify-between max-w-48">
+            <span>Пн — Сб</span>
+            <span>09:00–18:00</span>
+          </li>
+          <li class="flex justify-between max-w-48">
+            <span>Нд</span>
+            <span>Вихідний</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-6 border-t border-white/10 text-center text-xs text-white/40">
+      &copy; {currentYear} WeSeW. Всі права захищені.
+    </div>
+  </div>
+</footer>

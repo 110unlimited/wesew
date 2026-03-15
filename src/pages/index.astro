@@ -1,17 +1,183 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="WeSeW — Ательє індивідуального пошиву у Харкові">
+  <!-- Hero -->
+  <section class="relative bg-bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-20 md:py-32 text-center">
+      <p class="text-sm font-semibold tracking-widest uppercase text-primary-light mb-4">
+        25+ років досвіду
+      </p>
+      <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-text leading-tight">
+        Ми шиємо<br />
+        <span class="text-primary">вашу історію</span>
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-text-muted max-w-2xl mx-auto leading-relaxed">
+        Ательє Ірини Ємельянової у Харкові. Персональний пошив, весільні сукні, ремонт та перешив одягу.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="tel:+380963061920"
+          class="w-full sm:w-auto bg-primary text-white px-8 py-4 text-sm font-semibold tracking-wide uppercase rounded-sm transition-colors duration-200 hover:bg-primary/90 cursor-pointer"
+        >
+          Зателефонувати
+        </a>
+        <a
+          href="https://t.me/+380963061920"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto border-2 border-primary text-primary px-8 py-4 text-sm font-semibold tracking-wide uppercase rounded-sm transition-colors duration-200 hover:bg-primary hover:text-white cursor-pointer"
+        >
+          Написати в Telegram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-text">
+          Про ательє
+        </h2>
+        <p class="mt-6 text-text-muted leading-relaxed text-lg">
+          Ательє WeSeW — це понад 25 років бездоганної роботи. Ірина Ємельянова створює одяг, який підкреслює індивідуальність кожного клієнта. Від ідеї до готового виробу — з увагою до кожної деталі.
+        </p>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-8 bg-bg-white rounded-sm border border-border">
+          <p class="font-heading text-5xl font-bold text-primary">25+</p>
+          <p class="mt-2 text-sm text-text-muted uppercase tracking-wide">років досвіду</p>
+        </div>
+        <div class="text-center p-8 bg-bg-white rounded-sm border border-border">
+          <p class="font-heading text-5xl font-bold text-primary">1000+</p>
+          <p class="mt-2 text-sm text-text-muted uppercase tracking-wide">задоволених клієнтів</p>
+        </div>
+        <div class="text-center p-8 bg-bg-white rounded-sm border border-border">
+          <p class="font-heading text-5xl font-bold text-primary">100%</p>
+          <p class="mt-2 text-sm text-text-muted uppercase tracking-wide">індивідуальний підхід</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services preview -->
+  <section class="py-16 md:py-24 bg-bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center">
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-text">
+          Послуги
+        </h2>
+        <p class="mt-4 text-text-muted text-lg">
+          Повний спектр послуг з пошиву та ремонту одягу
+        </p>
+      </div>
+
+      <!-- Bento grid -->
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-12 gap-4">
+        {/* Row 1: Main service wide */}
+        <a href="/services/custom-tailoring" class="group relative md:col-span-12 overflow-hidden rounded-sm cursor-pointer">
+          <div class="aspect-[16/10] md:aspect-[21/8]">
+            <div class="absolute inset-0 bg-primary/10 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('/images/services/custom-tailoring.jpg')" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+              <p class="text-secondary text-xs font-semibold tracking-widest uppercase">від 2 000 грн</p>
+              <h3 class="font-heading text-2xl md:text-4xl font-bold text-white mt-1">Персональний пошив</h3>
+              <p class="text-white/70 text-sm mt-2 max-w-lg">Чоловічий та жіночий одяг за індивідуальними мірками</p>
+            </div>
+          </div>
+        </a>
+
+        {/* Row 2: Wedding — dresses + suits side by side */}
+        <a href="/services/wedding-dresses" class="group relative md:col-span-6 overflow-hidden rounded-sm cursor-pointer">
+          <div class="aspect-[4/3]">
+            <div class="absolute inset-0 bg-primary/10 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('/images/services/wedding-dresses.jpg')" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+              <p class="text-secondary text-xs font-semibold tracking-widest uppercase">від 8 000 грн</p>
+              <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mt-1">Весільні сукні</h3>
+              <p class="text-white/70 text-sm mt-1">Від ескізу до останнього стібка</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="/services/wedding-suits" class="group relative md:col-span-6 overflow-hidden rounded-sm cursor-pointer">
+          <div class="aspect-[4/3]">
+            <div class="absolute inset-0 bg-primary/10 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('/images/services/wedding-suits.jpg')" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+              <p class="text-secondary text-xs font-semibold tracking-widest uppercase">від 6 000 грн</p>
+              <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mt-1">Весільні костюми</h3>
+              <p class="text-white/70 text-sm mt-1">Елегантний костюм для нареченого</p>
+            </div>
+          </div>
+        </a>
+
+        {/* Row 3: Three smaller cards */}
+        <a href="/services/prom" class="group relative md:col-span-4 overflow-hidden rounded-sm cursor-pointer">
+          <div class="aspect-[4/3]">
+            <div class="absolute inset-0 bg-primary/10 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('/images/services/prom.jpg')" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <p class="text-secondary text-xs font-semibold tracking-widest uppercase">від 3 000 грн</p>
+              <h3 class="font-heading text-xl md:text-2xl font-bold text-white mt-1">Випускні костюми та сукні</h3>
+            </div>
+          </div>
+        </a>
+
+        <a href="/services/repairs" class="group relative md:col-span-4 overflow-hidden rounded-sm cursor-pointer">
+          <div class="aspect-[4/3]">
+            <div class="absolute inset-0 bg-primary/10 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('/images/services/repairs.jpg')" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <p class="text-secondary text-xs font-semibold tracking-widest uppercase">від 200 грн</p>
+              <h3 class="font-heading text-xl md:text-2xl font-bold text-white mt-1">Ремонт одягу</h3>
+            </div>
+          </div>
+        </a>
+
+        <a href="/services/alterations" class="group relative md:col-span-4 overflow-hidden rounded-sm cursor-pointer">
+          <div class="aspect-[4/3]">
+            <div class="absolute inset-0 bg-primary/10 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('/images/services/alterations.jpg')" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <p class="text-secondary text-xs font-semibold tracking-widest uppercase">від 500 грн</p>
+              <h3 class="font-heading text-xl md:text-2xl font-bold text-white mt-1">Перешив</h3>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-text">
+        Готові створити щось особливе?
+      </h2>
+      <p class="mt-4 text-text-muted text-lg">
+        Зв'яжіться з нами — обговоримо вашу ідею
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="tel:+380963061920"
+          class="w-full sm:w-auto bg-primary text-white px-8 py-4 text-sm font-semibold tracking-wide uppercase rounded-sm transition-colors duration-200 hover:bg-primary/90 cursor-pointer"
+        >
+          Зателефонувати
+        </a>
+        <a
+          href="https://t.me/+380963061920"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto border-2 border-primary text-primary px-8 py-4 text-sm font-semibold tracking-wide uppercase rounded-sm transition-colors duration-200 hover:bg-primary hover:text-white cursor-pointer"
+        >
+          Telegram
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

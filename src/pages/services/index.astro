@@ -1,0 +1,164 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const services = [
+  {
+    slug: "custom-tailoring",
+    title: "Персональний пошив",
+    desc: "Створюємо чоловічий та жіночий одяг за вашими індивідуальними мірками. Костюми, сукні, сорочки, штани — будь-який одяг, який ідеально сидить саме на вас.",
+    price: "від 2 000 грн",
+    image: "/images/services/custom-tailoring.jpg",
+    features: ["Індивідуальні мірки", "Вибір тканини", "Примірки на кожному етапі"],
+  },
+  {
+    slug: "wedding-dresses",
+    title: "Весільні сукні",
+    desc: "Сукня вашої мрії — від першого ескізу до останнього стібка. Працюємо з найкращими тканинами та фурнітурою для вашого особливого дня.",
+    price: "від 8 000 грн",
+    image: "/images/services/wedding-dresses.jpg",
+    features: ["Унікальний дизайн", "Преміум тканини", "Декорування"],
+  },
+  {
+    slug: "wedding-suits",
+    title: "Весільні костюми",
+    desc: "Елегантний костюм для нареченого — класичний або сучасний. Ідеальна посадка, преміум тканини, увага до кожної деталі.",
+    price: "від 6 000 грн",
+    image: "/images/services/wedding-suits.jpg",
+    features: ["Костюми-двійки та трійки", "Підбір тканини та кольору", "Сорочка та аксесуари"],
+  },
+  {
+    slug: "prom",
+    title: "Випускні костюми та сукні",
+    desc: "Одяг для вашого випускного — костюми та сукні для школи й університету. Щоб цей день запам'ятався не тільки дипломом.",
+    price: "від 3 000 грн",
+    image: "/images/services/prom.jpg",
+    features: ["Школа та університет", "Костюми та сукні", "Індивідуальний пошив"],
+  },
+  {
+    slug: "repairs",
+    title: "Ремонт одягу",
+    desc: "Професійний ремонт будь-якої складності. Від заміни блискавки до повного відновлення улюбленої речі.",
+    price: "від 200 грн",
+    image: "/images/services/repairs.jpg",
+    features: ["Заміна блискавок", "Штопка та латки", "Заміна підкладки"],
+  },
+  {
+    slug: "alterations",
+    title: "Перешив",
+    desc: "Оновлення та трансформація існуючого одягу. Зміна розміру, фасону або повне переосмислення речі.",
+    price: "від 500 грн",
+    image: "/images/services/alterations.jpg",
+    features: ["Зміна розміру", "Зміна фасону", "Модернізація"],
+  },
+];
+---
+
+<Layout
+  title="Послуги — WeSeW Ательє у Харкові"
+  description="Послуги ательє WeSeW: персональний пошив, весільні сукні, ремонт одягу, перешив. Індивідуальний підхід та 25+ років досвіду."
+>
+  <!-- Header -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h1 class="font-heading text-4xl md:text-6xl font-bold text-text">
+        Наші послуги
+      </h1>
+      <p class="mt-4 text-text-muted text-lg max-w-2xl mx-auto">
+        Повний спектр послуг з пошиву та ремонту одягу з індивідуальним підходом
+      </p>
+    </div>
+  </section>
+
+  <!-- Service sections -->
+  {services.map((service, i) => {
+    const imageRight = i % 2 !== 0;
+    return (
+      <section class:list={[
+        "border-t border-border",
+        i % 2 === 0 ? "bg-bg-white" : "bg-bg",
+      ]}>
+        <div class:list={[
+          "max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center",
+          imageRight ? "md:direction-rtl" : "",
+        ]}>
+          <!-- Image -->
+          <div class:list={[
+            "relative aspect-[4/3] md:aspect-auto md:h-full min-h-64 md:min-h-96 overflow-hidden",
+            imageRight ? "md:order-2" : "",
+          ]}>
+            <div
+              class="absolute inset-0 bg-border/50 bg-cover bg-center transition-transform duration-700 hover:scale-[1.03]"
+              style={`background-image: url('${service.image}')`}
+            />
+          </div>
+
+          <!-- Content -->
+          <div class:list={[
+            "px-6 py-12 md:px-16 md:py-20",
+            imageRight ? "md:order-1 md:text-right" : "",
+          ]}>
+            <p class="text-primary-light text-xs font-semibold tracking-widest uppercase">
+              {service.price}
+            </p>
+            <h2 class="font-heading text-3xl md:text-5xl font-bold text-text mt-2 leading-tight">
+              {service.title}
+            </h2>
+            <p class="mt-4 text-text-muted text-lg leading-relaxed max-w-lg">
+              {service.desc}
+            </p>
+            <ul class:list={[
+              "mt-6 space-y-2",
+              imageRight ? "md:ml-auto" : "",
+            ]}>
+              {service.features.map((feature) => (
+                <li class:list={[
+                  "flex items-center gap-3 text-sm text-text-muted",
+                  imageRight ? "md:flex-row-reverse" : "",
+                ]}>
+                  <span class="w-1.5 h-1.5 bg-primary rounded-full shrink-0" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+            <div class:list={["mt-8", imageRight ? "md:text-right" : ""]}>
+              <a
+                href={`/services/${service.slug}`}
+                class="inline-block bg-primary text-white px-8 py-4 text-sm font-semibold tracking-wide uppercase rounded-sm transition-colors duration-200 hover:bg-primary/90 cursor-pointer"
+              >
+                Детальніше
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  })}
+
+  <!-- CTA -->
+  <section class="py-16 md:py-24 border-t border-border">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-text">
+        Маєте запитання?
+      </h2>
+      <p class="mt-3 text-text-muted text-lg">
+        Зв'яжіться з нами — допоможемо обрати потрібну послугу
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="tel:+380963061920"
+          class="w-full sm:w-auto bg-primary text-white px-8 py-4 text-sm font-semibold tracking-wide uppercase rounded-sm transition-colors duration-200 hover:bg-primary/90 cursor-pointer"
+        >
+          Зателефонувати
+        </a>
+        <a
+          href="https://t.me/+380963061920"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto border-2 border-primary text-primary px-8 py-4 text-sm font-semibold tracking-wide uppercase rounded-sm transition-colors duration-200 hover:bg-primary hover:text-white cursor-pointer"
+        >
+          Telegram
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

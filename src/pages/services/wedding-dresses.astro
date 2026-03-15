@@ -1,0 +1,63 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Весільні сукні — WeSeW Ательє у Харкові"
+  description="Пошив весільних суконь на замовлення. Унікальний дизайн, преміум тканини, ідеальна посадка. Ательє WeSeW у Харкові."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div
+      class="absolute inset-0 bg-primary/20 bg-cover bg-center"
+      style="background-image: url('/images/services/wedding-dresses.jpg')"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
+    <div class="relative max-w-6xl mx-auto px-4 py-24 md:py-36">
+      <a href="/services" class="text-white/70 text-sm hover:text-white transition-colors duration-200 cursor-pointer">&larr; Усі послуги</a>
+      <p class="text-secondary text-sm font-semibold tracking-wide uppercase mt-6">від 8 000 грн</p>
+      <h1 class="font-heading text-4xl md:text-6xl font-bold text-white mt-2">
+        Весільні сукні
+      </h1>
+      <p class="mt-4 text-white/80 text-lg max-w-2xl leading-relaxed">
+        Сукня вашої мрії — від першого ескізу до останнього стібка. Працюємо з найкращими тканинами та фурнітурою для вашого особливого дня.
+      </p>
+    </div>
+  </section>
+
+  <!-- Details -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-text">Ваша ідеальна сукня</h2>
+      <div class="mt-8 space-y-6 text-text-muted text-lg leading-relaxed">
+        <p>Весільна сукня — це більше ніж одяг. Це відображення вашої індивідуальності в найважливіший день. Ми створюємо сукні, які розповідають вашу історію.</p>
+        <p>Працюємо з мереживом, шовком, атласом, тюлем та іншими преміум тканинами. Кожен елемент декору — бісер, вишивка, аплікації — підбирається індивідуально.</p>
+        <p>Від першої зустрічі до фінальної примірки — ми поруч на кожному кроці.</p>
+      </div>
+
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-text mt-16">Що входить</h2>
+      <ul class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {["Консультація та ескіз", "Підбір тканин та декору", "Пошив за індивідуальними мірками", "3-4 примірки", "Фінальне підгонка", "Декорування та оздоблення"].map((item) => (
+          <li class="flex items-center gap-3 text-text-muted text-lg">
+            <span class="w-2 h-2 bg-primary rounded-full shrink-0" />
+            {item}
+          </li>
+        ))}
+      </ul>
+
+      <!-- CTA -->
+      <div class="mt-16 p-8 md:p-12 bg-bg-white border border-border rounded-sm text-center">
+        <h2 class="font-heading text-3xl font-bold text-text">Мрієте про ідеальну сукню?</h2>
+        <p class="mt-2 text-text-muted text-lg">Запишіться на консультацію — втілимо вашу мрію</p>
+        <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="tel:+380963061920" class="w-full sm:w-auto bg-primary text-white px-8 py-4 text-sm font-semibold tracking-wide uppercase rounded-sm transition-colors duration-200 hover:bg-primary/90 cursor-pointer">
+            Зателефонувати
+          </a>
+          <a href="https://t.me/+380963061920" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto border-2 border-primary text-primary px-8 py-4 text-sm font-semibold tracking-wide uppercase rounded-sm transition-colors duration-200 hover:bg-primary hover:text-white cursor-pointer">
+            Telegram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

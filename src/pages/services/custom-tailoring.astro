@@ -1,0 +1,63 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Персональний пошив — WeSeW Ательє у Харкові"
+  description="Персональний пошив чоловічого та жіночого одягу за індивідуальними мірками. Костюми, сукні, сорочки, штани. Ательє WeSeW у Харкові."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div
+      class="absolute inset-0 bg-primary/20 bg-cover bg-center"
+      style="background-image: url('/images/services/custom-tailoring.jpg')"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
+    <div class="relative max-w-6xl mx-auto px-4 py-24 md:py-36">
+      <a href="/services" class="text-white/70 text-sm hover:text-white transition-colors duration-200 cursor-pointer">&larr; Усі послуги</a>
+      <p class="text-secondary text-sm font-semibold tracking-wide uppercase mt-6">від 2 000 грн</p>
+      <h1 class="font-heading text-4xl md:text-6xl font-bold text-white mt-2">
+        Персональний пошив
+      </h1>
+      <p class="mt-4 text-white/80 text-lg max-w-2xl leading-relaxed">
+        Створюємо чоловічий та жіночий одяг за вашими індивідуальними мірками. Костюми, сукні, сорочки, штани — будь-який одяг, який ідеально сидить саме на вас.
+      </p>
+    </div>
+  </section>
+
+  <!-- Details -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-text">Як ми працюємо</h2>
+      <div class="mt-8 space-y-6 text-text-muted text-lg leading-relaxed">
+        <p>Кожен виріб починається з консультації. Ми обговорюємо ваші побажання, стиль життя, нагоди для яких потрібен одяг.</p>
+        <p>Далі — зняття мірок, вибір тканини та фурнітури. Ми працюємо з перевіреними постачальниками якісних тканин з Європи та Туреччини.</p>
+        <p>Протягом пошиву проводимо 2-3 примірки, щоб досягти ідеальної посадки. Кожна деталь має значення.</p>
+      </div>
+
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-text mt-16">Що ми шиємо</h2>
+      <ul class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {["Чоловічі костюми", "Жіночі сукні", "Сорочки та блузи", "Штани та спідниці", "Пальта та жакети", "Вечірній одяг"].map((item) => (
+          <li class="flex items-center gap-3 text-text-muted text-lg">
+            <span class="w-2 h-2 bg-primary rounded-full shrink-0" />
+            {item}
+          </li>
+        ))}
+      </ul>
+
+      <!-- CTA -->
+      <div class="mt-16 p-8 md:p-12 bg-bg-white border border-border rounded-sm text-center">
+        <h2 class="font-heading text-3xl font-bold text-text">Готові замовити?</h2>
+        <p class="mt-2 text-text-muted text-lg">Зателефонуйте або напишіть — обговоримо вашу ідею</p>
+        <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="tel:+380963061920" class="w-full sm:w-auto bg-primary text-white px-8 py-4 text-sm font-semibold tracking-wide uppercase rounded-sm transition-colors duration-200 hover:bg-primary/90 cursor-pointer">
+            Зателефонувати
+          </a>
+          <a href="https://t.me/+380963061920" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto border-2 border-primary text-primary px-8 py-4 text-sm font-semibold tracking-wide uppercase rounded-sm transition-colors duration-200 hover:bg-primary hover:text-white cursor-pointer">
+            Telegram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

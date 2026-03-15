@@ -1,0 +1,85 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "WeSeW — ательє індивідуального пошиву у Харкові. Персональний пошив, весільні сукні, ремонт одягу. 25+ років досвіду." } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, "https://wesew.com.ua");
+---
+
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="canonical" href={canonicalURL.href} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:locale" content="uk_UA" />
+    <meta property="og:site_name" content="WeSeW" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{title}</title>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "WeSeW — Ательє Ірини Ємельянової",
+      "description": "Ательє індивідуального пошиву у Харкові. Персональний пошив, весільні сукні, ремонт одягу.",
+      "url": "https://wesew.com.ua",
+      "telephone": "+380963061920",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "вул. Валентинівська, 12",
+        "addressLocality": "Харків",
+        "postalCode": "61000",
+        "addressCountry": "UA"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Послуги ательє",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Персональний пошив" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Весільні сукні" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Весільні костюми" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Випускні костюми та сукні" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ремонт одягу" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Перешив" } }
+        ]
+      }
+    })} />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <Header />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
