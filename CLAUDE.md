@@ -24,7 +24,7 @@ npm run preview   # Preview production build locally
 
 Multi-page site with shared layout (Header + Footer).
 
-Pages: `/` (Home), `/services`, `/portfolio`, `/contacts`
+Pages: `/` (Home), `/services`, `/services/<slug>`, `/contacts`
 
 - All pages/components are Astro components (`.astro`) — zero client JS unless explicitly needed
 - Shared layout: `src/layouts/` — header with nav + footer with contacts on every page
@@ -43,6 +43,17 @@ Pages: `/` (Home), `/services`, `/portfolio`, `/contacts`
 - Light color scheme, mobile-first
 - Minimal, fast-loading — no heavy frameworks or unnecessary JS
 - CTA actions: phone call (`tel:+380963061920`) and Telegram (`https://t.me/+380963061920`)
+
+## Image Generation
+
+Service photos are generated via **Nano Banana 2 API** (skill: `kie-nano-banana-2`).
+
+- **Style:** JSON-structured prompts for consistency (see `presets/wesew.json` in skill directory)
+- **Resolution:** 1K (keeps files under 2MB)
+- **Format:** PNG, aspect ratio 3:4 for people, 4:3 for products
+- **Image-to-image:** Upload source to Google Drive → get public URL → pass as `--source`
+- **Photo style:** Editorial fashion photography, soft studio lighting, light grey backdrop
+- All service images live in `public/images/services/`
 
 ## Business Data
 

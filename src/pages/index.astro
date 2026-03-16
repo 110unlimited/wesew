@@ -76,78 +76,47 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
 
-      <!-- Bento grid -->
+      <!-- Bento grid — minimal, no photos -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-12 gap-4">
-        {/* Row 1: Main service wide */}
-        <a href="/services/custom-tailoring" class="group relative md:col-span-12 overflow-hidden rounded-sm cursor-pointer">
-          <div class="aspect-[16/10] md:aspect-[21/8]">
-            <div class="absolute inset-0 bg-primary/10 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('/images/services/custom-tailoring.jpg')" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-              <p class="text-secondary text-xs font-semibold tracking-widest uppercase">від 2 000 грн</p>
-              <h3 class="font-heading text-2xl md:text-4xl font-bold text-white mt-1">Персональний пошив</h3>
-              <p class="text-white/70 text-sm mt-2 max-w-lg">Чоловічий та жіночий одяг за індивідуальними мірками</p>
-            </div>
+        <a href="/services/custom-tailoring" class="group md:col-span-12 p-8 md:p-10 border border-border rounded-sm hover:border-primary/30 transition-all duration-200 cursor-pointer bg-bg flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <p class="text-primary-light text-xs font-semibold tracking-widest uppercase">від 2 000 грн</p>
+            <h3 class="font-heading text-2xl md:text-4xl font-bold text-text mt-1">Персональний пошив</h3>
+            <p class="text-text-muted text-sm mt-2">Чоловічий та жіночий одяг за індивідуальними мірками</p>
           </div>
+          <span class="text-primary text-sm font-semibold tracking-wide uppercase shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200">Детальніше &rarr;</span>
         </a>
 
-        {/* Row 2: Wedding — dresses + suits side by side */}
-        <a href="/services/wedding-dresses" class="group relative md:col-span-6 overflow-hidden rounded-sm cursor-pointer">
-          <div class="aspect-[4/3]">
-            <div class="absolute inset-0 bg-primary/10 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('/images/services/wedding-dresses.jpg')" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-              <p class="text-secondary text-xs font-semibold tracking-widest uppercase">від 8 000 грн</p>
-              <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mt-1">Весільні сукні</h3>
-              <p class="text-white/70 text-sm mt-1">Від ескізу до останнього стібка</p>
-            </div>
-          </div>
+        <a href="/services/wedding-dresses" class="group md:col-span-6 p-8 border border-border rounded-sm hover:border-primary/30 transition-all duration-200 cursor-pointer bg-bg">
+          <p class="text-primary-light text-xs font-semibold tracking-widest uppercase">від 8 000 грн</p>
+          <h3 class="font-heading text-2xl md:text-3xl font-bold text-text mt-1">Весільні сукні</h3>
+          <p class="text-text-muted text-sm mt-2">Від ескізу до останнього стібка</p>
+          <span class="mt-4 inline-block text-primary text-sm font-semibold tracking-wide uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-200">Детальніше &rarr;</span>
         </a>
 
-        <a href="/services/wedding-suits" class="group relative md:col-span-6 overflow-hidden rounded-sm cursor-pointer">
-          <div class="aspect-[4/3]">
-            <div class="absolute inset-0 bg-primary/10 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('/images/services/wedding-suits.jpg')" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-              <p class="text-secondary text-xs font-semibold tracking-widest uppercase">від 6 000 грн</p>
-              <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mt-1">Весільні костюми</h3>
-              <p class="text-white/70 text-sm mt-1">Елегантний костюм для нареченого</p>
-            </div>
-          </div>
+        <a href="/services/wedding-suits" class="group md:col-span-6 p-8 border border-border rounded-sm hover:border-primary/30 transition-all duration-200 cursor-pointer bg-bg">
+          <p class="text-primary-light text-xs font-semibold tracking-widest uppercase">від 6 000 грн</p>
+          <h3 class="font-heading text-2xl md:text-3xl font-bold text-text mt-1">Весільні костюми</h3>
+          <p class="text-text-muted text-sm mt-2">Елегантний костюм для нареченого</p>
+          <span class="mt-4 inline-block text-primary text-sm font-semibold tracking-wide uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-200">Детальніше &rarr;</span>
         </a>
 
-        {/* Row 3: Three smaller cards */}
-        <a href="/services/prom" class="group relative md:col-span-4 overflow-hidden rounded-sm cursor-pointer">
-          <div class="aspect-[4/3]">
-            <div class="absolute inset-0 bg-primary/10 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('/images/services/prom.jpg')" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <p class="text-secondary text-xs font-semibold tracking-widest uppercase">від 3 000 грн</p>
-              <h3 class="font-heading text-xl md:text-2xl font-bold text-white mt-1">Випускні костюми та сукні</h3>
-            </div>
-          </div>
+        <a href="/services/prom" class="group md:col-span-4 p-6 border border-border rounded-sm hover:border-primary/30 transition-all duration-200 cursor-pointer bg-bg">
+          <p class="text-primary-light text-xs font-semibold tracking-widest uppercase">від 3 000 грн</p>
+          <h3 class="font-heading text-xl md:text-2xl font-bold text-text mt-1">Випускні костюми та сукні</h3>
+          <span class="mt-3 inline-block text-primary text-sm font-semibold tracking-wide uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-200">Детальніше &rarr;</span>
         </a>
 
-        <a href="/services/repairs" class="group relative md:col-span-4 overflow-hidden rounded-sm cursor-pointer">
-          <div class="aspect-[4/3]">
-            <div class="absolute inset-0 bg-primary/10 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('/images/services/repairs.jpg')" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <p class="text-secondary text-xs font-semibold tracking-widest uppercase">від 200 грн</p>
-              <h3 class="font-heading text-xl md:text-2xl font-bold text-white mt-1">Ремонт одягу</h3>
-            </div>
-          </div>
+        <a href="/services/repairs" class="group md:col-span-4 p-6 border border-border rounded-sm hover:border-primary/30 transition-all duration-200 cursor-pointer bg-bg">
+          <p class="text-primary-light text-xs font-semibold tracking-widest uppercase">від 200 грн</p>
+          <h3 class="font-heading text-xl md:text-2xl font-bold text-text mt-1">Ремонт одягу</h3>
+          <span class="mt-3 inline-block text-primary text-sm font-semibold tracking-wide uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-200">Детальніше &rarr;</span>
         </a>
 
-        <a href="/services/alterations" class="group relative md:col-span-4 overflow-hidden rounded-sm cursor-pointer">
-          <div class="aspect-[4/3]">
-            <div class="absolute inset-0 bg-primary/10 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('/images/services/alterations.jpg')" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <p class="text-secondary text-xs font-semibold tracking-widest uppercase">від 500 грн</p>
-              <h3 class="font-heading text-xl md:text-2xl font-bold text-white mt-1">Перешив</h3>
-            </div>
-          </div>
+        <a href="/services/alterations" class="group md:col-span-4 p-6 border border-border rounded-sm hover:border-primary/30 transition-all duration-200 cursor-pointer bg-bg">
+          <p class="text-primary-light text-xs font-semibold tracking-widest uppercase">від 500 грн</p>
+          <h3 class="font-heading text-xl md:text-2xl font-bold text-text mt-1">Перешив</h3>
+          <span class="mt-3 inline-block text-primary text-sm font-semibold tracking-wide uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-200">Детальніше &rarr;</span>
         </a>
       </div>
     </div>
