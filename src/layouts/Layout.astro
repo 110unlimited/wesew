@@ -6,9 +6,10 @@ import Footer from "../components/Footer.astro";
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;
 }
 
-const { title, description = "WeSeW — ательє індивідуального пошиву у Харкові. Персональний пошив, весільні сукні, ремонт одягу. 25+ років досвіду." } = Astro.props;
+const { title, description = "WeSeW — ательє індивідуального пошиву у Харкові. Персональний пошив, весільні сукні, ремонт одягу. 25+ років досвіду.", ogImage = "/images/services/wedding-dresses.png" } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, "https://wesew.com.ua");
 ---
 
@@ -29,6 +30,9 @@ const canonicalURL = new URL(Astro.url.pathname, "https://wesew.com.ua");
     <meta property="og:url" content={canonicalURL.href} />
     <meta property="og:locale" content="uk_UA" />
     <meta property="og:site_name" content="WeSeW" />
+    <meta property="og:image" content={`https://wesew.com.ua${ogImage}`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
